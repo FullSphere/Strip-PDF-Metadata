@@ -18,12 +18,16 @@ Finds all PDFs in a folder and remove the metadata, updating the meta title to t
 #### Usage
 1. Clone or download this repo
 
+
 2. Place your PDF files in the folder
 
-2. Make the script executable (if not already):
+
+3. Make the script executable (if not already)
 ```bash
 chmod +x clean-pdfs.sh
+
 
 4. Run the script:
 ```bash
 ./clean-pdfs.sh
+
