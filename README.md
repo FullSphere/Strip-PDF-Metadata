@@ -1,33 +1,55 @@
 # Strip-PDF-Metadata
-Finds all PDFs in a folder and remove the metadata, updating the meta title to the name of the file.
+
+Finds all PDFs in a folder and removes their metadata. Also updates the PDF Title metadata to match the filename (without the `.pdf` extension).
 
 ---
 
 ## Requirements
 
-- `exiftool` installed and accessible in your system PATH.
+- [`exiftool`](https://exiftool.org/) installed and accessible in your system PATH.
 
 ### Install ExifTool
 
-- **macOS (Homebrew):**  
+- **macOS (Homebrew):**
   ```bash
   brew install exiftool
+  ```
+
+- **Ubuntu/Debian:**
+  ```bash
+  sudo apt update
+  sudo apt install libimage-exiftool-perl
+  ```
+
+- **Windows:**
+  Download and install from [exiftool.org](https://exiftool.org/), then add it to your system PATH.
 
 ---
 
-#### Usage
-1. Clone or download this repo
+## Usage
 
+1. Clone or download this repo.
+2. Place your PDF files in the target folder.
+3. (Optional) Edit the `folder` variable in `clean-pdfs.sh` to point to your folder. Use `.` for the current directory.
+4. Make the script executable:
+   ```bash
+   chmod +x clean-pdfs.sh
+   ```
+5. Run the script:
+   ```bash
+   ./clean-pdfs.sh
+   ```
 
-2. Place your PDF files in the folder
+---
 
+## What it does
 
-3. Make the script executable (if not already)
-```bash
-chmod +x clean-pdfs.sh
+- Recursively finds all `.pdf` files in the specified folder.
+- Removes all embedded metadata.
+- Sets the PDF Title metadata to match the filename (excluding `.pdf`).
 
+---
 
-4. Run the script:
-```bash
-./clean-pdfs.sh
+## License
 
+MIT
