@@ -53,3 +53,7 @@ Finds all PDFs in a folder and removes their metadata. Also updates the PDF Titl
 ## License
 
 MIT
+
+---
+
+**Built by [FullSphere](https://fullsphere.co.uk)**
